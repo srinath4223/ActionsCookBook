@@ -14,8 +14,9 @@ jobs:
         - name: Greet User 
           shell: bash
           run: |
-                echo "Hello world from ${{ github.actor }}'"
+                echo "Hello ${{ vars.WHO_TO_GREET }} from ${{ github.actor }}'"
                 echo "Current Branch is '${{ github.ref }}'"
+                echo "My secret is ${{ secrets.MY_SECRET }}"
         - name: Checkout
           uses: actions/checkout@v4
         - run: tree
