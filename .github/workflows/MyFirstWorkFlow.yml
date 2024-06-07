@@ -5,9 +5,6 @@ on:
   push:
     branches:
         - main
-        - 'release/**'
-    paths:
-        - "doc/**"
   workflow_dispatch:
 jobs:
   my_first_job:
